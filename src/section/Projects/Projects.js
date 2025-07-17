@@ -1,7 +1,7 @@
 function Projects() {
   return (
     <section id="projects">
-      <h1>Home Section</h1>
+      <h1> Project Section</h1>
     </section>
   );
 }
