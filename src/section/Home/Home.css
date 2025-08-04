@@ -1,0 +1,80 @@
+.home-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  background: linear-gradient(120deg, #f8f8f8, #e6e6e6);
+  color: #1a1a1a;
+  scroll-snap-align: start;
+}
+
+.intro {
+  max-width: 600px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #b79a67;
+}
+
+.intro h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.intro p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-color: #b79a67;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a4854f;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #b79a67;
+  color: #b79a67;
+}
+
+.btn.outline:hover {
+  background-color: #b79a67;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

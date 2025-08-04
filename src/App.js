@@ -1,24 +1,43 @@
-import Navbar from './components/navbar';
-import Home from './section/Home';
-import About from './section/About';
-import Education from './section/Education';
-import WorkExp from './section/WorkExp';
-import Projects from './section/Projects';
-import Contact from './section/Contact';
+import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Home from './section/Home/Home';
+import About from './section/About/About';
+import Education from './section/Education/Education';
+import Work from './section/WorkExp/WorkExp';
+import Projects from './section/Projects/Projects';
+import Contact from './section/Contact/Contact';
+import './index.css'; // Make sure this import is present
 
 function App() {
-  return (
-    <div className="App bg-[#f9f4e8] text-[#4a3f35]">
-      <Navbar />
+  const [isReady, setIsReady] = useState(false);
 
-      <main>
-        <Home />
-        <About />
-        <Education />
-        <WorkExp />
-        <Projects />
-        <Contact />
-      </main>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsReady(true);
+    }, 1000); // 1-second delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="App">
+      {isReady ? (
+        <>
+          <Navbar />
+          <main>
+            <Home />
+            <About />
+            <Education />
+            <Work />
+            <Projects />
+            <Contact />
+          </main>
+        </>
+      ) : (
+        <div className="loader">
+          <div className="spinner"></div>
+        </div>
+      )}
     </div>
   );
 }

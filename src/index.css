@@ -1,13 +1,74 @@
+/* Base body styles */
 body {
+  padding-top: 0px; /* adjust to your navbar + gap */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff; /* <== Add this line to reset normal background */
+  color: #000000; /* Optional: ensures text is visible */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* === Loader screen === */
+.loader {
+  position: fixed; /* cover whole screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f; /* deep dark to match navbar vibe */
+  z-index: 9999;
+}
+
+/* Double ring spinner */
+.loader .spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid transparent;
+  border-top: 4px solid #b79a67; /* warm gold accent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+.loader .spinner::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 4px solid transparent;
+  border-bottom: 4px solid #b79a67;
+  border-radius: 50%;
+  animation: spinReverse 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Fade out animation for loader */
+.loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
 }

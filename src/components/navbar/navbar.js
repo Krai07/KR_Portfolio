@@ -1,27 +1,45 @@
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import './Navbar.css';
 
-function Navbar() {
-  const navLinks = ['Home', 'About', 'Education', 'Work', 'Projects', 'Contact'];
+const navLinks = ['Home', 'About', 'Education', 'Work', 'Projects', 'Contact'];
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <nav className="fixed top-0 w-full bg-[#f9f4e8] shadow-md z-50">
-      <ul className="flex list-none justify-center gap-4 md:gap-10 py-4 text-[#4a3f35] text-sm md:text-base font-medium">
-              {navLinks.map((name) => (
-          <li key={name}>
-            <Link
-              to={name.toLowerCase()}
-              smooth={true}
-              duration={500}
-              offset={-70}
-              className="cursor-pointer hover:text-[#6d584e] transition-colors duration-200"
-            >
-              {name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="navbar">
+      <div className={`navbar-container`}>
+        <div className="navbar-logo">MyPortfolio</div>
+        <ul className={`navbar-list ${menuOpen ? 'show' : ''}`}>
+          {navLinks.map(name => (
+            <li key={name}>
+              <Link
+                to={name.toLowerCase()}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="navbar-link"
+                onClick={handleLinkClick}
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div
+          className={`hamburger ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
   );
 }
-
-export default Navbar;
