@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
-  background: linear-gradient(120deg, #f8f8f8, #e6e6e6);
+ background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #1a1a1a;
   scroll-snap-align: start;
 }

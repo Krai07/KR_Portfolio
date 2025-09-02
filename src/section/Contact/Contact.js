@@ -17,17 +17,17 @@ function Contact() {
         <p>Feel free to reach out for collaborations or just a friendly chat!</p>
         <div className="contact-info">
           <p>
-            <FaEnvelope className="icon" /> yourmail@example.com
+            <FaEnvelope className="icon" />raikshitij07@gmail.com
           </p>
           <p>
-            <FaPhone className="icon" /> +91 98765 43210
+            <FaPhone className="icon" />+91 9833646431
           </p>
         </div>
         <div className="socials">
           <a href="https://www.linkedin.com/in/kshitij-rai-07052001/" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Krai07" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </div>

@@ -1,96 +1,75 @@
-.work-exp {
+.work-experience {
   position: relative;
-  min-height: 100vh;
-  padding: 80px 20px;
-  background: #f9f9f9;
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  min-height: 150vh;
 }
 
-.work-title {
+.workexp-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 60px;
+  font-size: 2rem;
+  margin-bottom: 3rem;
   font-weight: bold;
-  color: #333;
 }
 
-/* Timeline line */
 .timeline {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
 }
 
-.timeline::before {
-  content: "";
+/* Center vertical progressive line */
+.timeline-line {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 50%;
   width: 4px;
-  background: #333;
-  transform: translateX(-50%);
+  height: 100%;
+  background: linear-gradient(180deg, #ff7eb3, #65c7f7, #0052d4);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  border-radius: 2px;
+  z-index: 1;
 }
 
-/* Timeline card */
-.timeline-card {
+/* Timeline items */
+.timeline-item {
   position: relative;
-  width: 45%;
-  margin: 40px 0;
-  background: #fff;
+  display: flex;
+  z-index: 2;
+}
+
+/* Glassy cards */
+.timeline-card {
+  width: 40%;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.timeline-card.left {
-  left: 0;
-  transform: translateX(-4%);
+/* Odd → left */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+.timeline-item.left .timeline-card {
+  margin-right: auto;
+  text-align: right;
 }
 
-.timeline-card.right {
-  left: 55%;
-  transform: translateX(4%);
+/* Even → right */
+.timeline-item.right {
+  justify-content: flex-end;
 }
-
-.timeline-card .content {
+.timeline-item.right .timeline-card {
+  margin-left: auto;
   text-align: left;
-}
-
-.timeline-card h3 {
-  margin: 0;
-  font-size: 1.6rem;
-  color: #222;
-}
-
-.timeline-card h4 {
-  margin: 5px 0;
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.timeline-card .duration {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-.timeline-card p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .timeline::before {
-    left: 8px;
-  }
-
-  .timeline-card {
-    width: calc(100% - 40px);
-    left: 20px !important;
-    transform: none !important;
-  }
 }

@@ -1,55 +1,49 @@
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import "./WorkExp.css";
 
 const experiences = [
-  {
-    id: 1,
-    role: "Consultant",
-    company: "MindCraft Software Pvt Ltd",
-    duration: "Sep 2024 - Present",
-    description: "Developed scalable web apps with React and Node.js, optimized APIs, and led team collaborations.",
-  },
-  {
-    id: 2,
-    role: "Associate Consultant",
-    company: "MindCraft Software Pvt Ltd",
-    duration: "Aug 2023 - Sep 2024",
-    description: "Built dynamic UIs, improved accessibility, and implemented animations for smooth user experiences.",
-  },
-  {
-    id: 3,
-    role: "Trainee - CyberSecurity",
-    company: "TataStrive",
-    duration: "April 2023 - Aug 2023",
-    description: "Assisted in backend development and testing, gaining hands-on experience in Agile methodology.",
-  },
+  { id: 1, company: "Company A", role: "Software Engineer", duration: "Jan 2022 - Present", description: "Worked on full-stack development, optimized APIs, and improved performance by 40%." },
+  { id: 2, company: "Company B", role: "Frontend Developer", duration: "Jul 2020 - Dec 2021", description: "Developed modern UI with React and improved user retention by 25%." },
+  { id: 3, company: "Company C", role: "Backend Intern", duration: "Jan 2020 - Jun 2020", description: "Built scalable APIs and integrated database solutions with MongoDB." },
 ];
 
-function WorkExp() {
+const WorkExperience = () => {
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const pathLength = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+
   return (
-    <section id="work" className="work-exp">
-      <h2 className="work-title">Work Experience</h2>
+    <section className="work-experience" ref={containerRef}>
+      <h2 className="workexp-title">Work Experience</h2>
       <div className="timeline">
+        {/* Center vertical progressive line */}
+        <motion.div className="timeline-line" style={{ scaleY: pathLength }} />
+
         {experiences.map((exp, index) => (
-          <motion.div
-            key={exp.id}
-            className={`timeline-card ${index % 2 === 0 ? "left" : "right"}`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }} 
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <div className="content">
+          <div key={exp.id} className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}>
+            <motion.div
+              className="timeline-card"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
               <h3>{exp.role}</h3>
-              <h4>{exp.company}</h4>
+              <p className="company">{exp.company}</p>
               <span className="duration">{exp.duration}</span>
-              <p>{exp.description}</p>
-            </div>
-          </motion.div>
+              <p className="description">{exp.description}</p>
+            </motion.div>
+          </div>
         ))}
       </div>
     </section>
   );
-}
+};
 
-export default WorkExp;
+export default WorkExperience;
