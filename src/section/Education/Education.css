@@ -1,0 +1,115 @@
+/* Section Base */
+.education-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  text-align: center;
+}
+
+.education-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #ff7eb3, #65c7f7, #0052d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Timeline Wrapper */
+.education-timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #ff7eb3, #65c7f7, #0052d4);
+  border-image-slice: 1;
+}
+
+/* Each Item */
+.education-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+/* Dots on the Line */
+.edu-dot {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #ff7eb3, #65c7f7, #0052d4);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 126, 179, 0.8);
+  z-index: 2;
+}
+
+/* Cards */
+.edu-card {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 20px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Card Content */
+.edu-degree {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #ff7eb3, #65c7f7, #0052d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.edu-institution {
+  font-size: 1rem;
+  color: #e1e1e1;
+  margin-bottom: 5px;
+}
+
+.edu-duration {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .education-timeline {
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .education-item {
+    margin-bottom: 40px;
+  }
+
+  .edu-dot {
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-bottom: 15px;
+  }
+}
