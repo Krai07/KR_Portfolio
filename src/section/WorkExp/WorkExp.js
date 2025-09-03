@@ -3,9 +3,9 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import "./WorkExp.css";
 
 const experiences = [
-  { id: 1, company: "Company A", role: "Software Engineer", duration: "Jan 2022 - Present", description: "Worked on full-stack development, optimized APIs, and improved performance by 40%." },
-  { id: 2, company: "Company B", role: "Frontend Developer", duration: "Jul 2020 - Dec 2021", description: "Developed modern UI with React and improved user retention by 25%." },
-  { id: 3, company: "Company C", role: "Backend Intern", duration: "Jan 2020 - Jun 2020", description: "Built scalable APIs and integrated database solutions with MongoDB." },
+  { id: 1, company: "MindCraft Software", role: "Consultant", duration: "Sep 2024 - Present", description: "Worked on full-stack development, optimized APIs, and improved performance by 40%." },
+  { id: 2, company: "MindCraft Software", role: "Associate Consultant", duration: "Aug 2023 - Aug 2024", description: "Developed modern UI with React and improved user retention by 25%." },
+  { id: 3, company: "Tata Strive", role: "Trainee- CyberSecurity", duration: "April 2023 - Aug 2024", description: "Built scalable APIs and integrated database solutions with MongoDB." },
 ];
 
 const WorkExperience = () => {
