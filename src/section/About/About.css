@@ -1,0 +1,27 @@
+/* Section Base */
+.about-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);  
+  color: #fff;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff7eb3, #65c7f7, #0052d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  line-height: 1.6;
+  color: #e1e1e1;
+}
