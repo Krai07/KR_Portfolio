@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Projects.css";
+import { FaGithub } from "react-icons/fa";
+
 
 const projects = [
   {
@@ -75,23 +77,18 @@ const Projects = () => {
             </div>
             <p className="project-description">{project.description}</p>
             <div className="project-links">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="btn"
-              >
-                GitHub
-              </a>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer"
-                className="btn"
-              >
-                Demo
-              </a>
-            </div>
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noreferrer"
+      className="btn-icon"
+    >
+      <FaGithub size={28} />
+    </a>
+  )}
+</div>
+
           </div>
         ))}
       </motion.div>
