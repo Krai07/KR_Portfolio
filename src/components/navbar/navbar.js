@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className={`navbar-container`}>
+      <div className="navbar-container">
         <div className="navbar-logo">MyPortfolio</div>
         <ul className={`navbar-list ${menuOpen ? 'show' : ''}`}>
           {navLinks.map(name => (
@@ -23,6 +23,8 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 offset={-70}
+                spy={true}
+                activeClass="active"
                 className="navbar-link"
                 onClick={handleLinkClick}
               >

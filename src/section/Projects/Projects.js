@@ -52,7 +52,7 @@ const Projects = () => {
   const loopProjects = [...projects, ...projects];
 
   return (
-    <section className="projects-section">
+    <section  id="projects" className="projects-section">
       <h2 className="projects-title">Projects</h2>
 
       <motion.div

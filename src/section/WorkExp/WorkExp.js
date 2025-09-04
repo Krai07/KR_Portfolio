@@ -19,7 +19,7 @@ const WorkExperience = () => {
   const pathLength = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   return (
-    <section className="work-experience" ref={containerRef}>
+    <section id= "work" className="work-experience" ref={containerRef}>
       <h2 className="workexp-title">Work Experience</h2>
       <div className="timeline">
         {/* Center vertical progressive line */}

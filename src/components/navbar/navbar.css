@@ -4,24 +4,25 @@
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 92%;
   max-width: 1200px;
-  background-color: rgba(20, 20, 20, 0.35);
-  backdrop-filter: blur(12px);
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 9999px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.8rem;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  color: #fff; /* white text */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-/* === Container inside navbar === */
+/* === Container === */
 .navbar-container {
   width: 100%;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,28 +30,57 @@
 
 /* === Logo === */
 .navbar-logo {
-  font-size: 1.5rem;
-  color: #fff;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #FFD580, #FFAA33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 /* === Nav links === */
 .navbar-list {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.6rem;
   list-style: none;
 }
 
 .navbar-link {
-  color: #fff; /* always white */
+  position: relative;
+  color: #f5f5f5;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-  color: #FFD580; /* soft gold hover */
+  color: #FFD580;
+}
+
+/* underline effect */
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: #FFD580;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* Active link highlight */
+.navbar-link.active {
+  color: #FFD580;
+  font-weight: 600;
 }
 
 /* === Hamburger === */
@@ -63,13 +93,14 @@
 
 .hamburger span {
   height: 3px;
-  width: 25px;
-  background: #fff; /* white bars */
+  width: 26px;
+  background: #fff;
   transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 6px);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -92,8 +123,10 @@
     right: 0;
     flex-direction: column;
     width: 100%;
-    background: rgba(20, 20, 20, 0.9); /* darker on mobile for clarity */
-    backdrop-filter: blur(10px);
+    background: rgba(15, 15, 15, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
     overflow: hidden;
 
     max-height: 0;
@@ -103,7 +136,7 @@
   }
 
   .navbar-list.show {
-    max-height: 500px; /* adjust if needed */
+    max-height: 500px;
     opacity: 1;
     transform: translateY(0);
   }
@@ -111,5 +144,6 @@
   .navbar-link {
     padding: 1rem;
     text-align: center;
+    width: 100%;
   }
 }

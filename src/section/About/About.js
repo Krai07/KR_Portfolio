@@ -4,7 +4,7 @@ import SkillMarquee from "../../components/SkillMarquee/SkillMarquee";
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section id= "about" className="about-section">
       <h2 className="about-title">About Me</h2>
       <p className="about-text">
         I’m a passionate Software Developer with expertise in building scalable
