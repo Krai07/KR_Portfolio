@@ -53,13 +53,14 @@
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
+  padding-bottom: 4px;
 }
 
 .navbar-link:hover {
   color: #FFD580;
 }
 
-/* underline effect */
+/* Gradient hover/active underline */
 .navbar-link::after {
   content: "";
   position: absolute;
@@ -67,8 +68,8 @@
   bottom: -4px;
   height: 2px;
   width: 0%;
-  background: #FFD580;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #FFD580, #FFAA33);
+  transition: width 0.4s ease;
   border-radius: 2px;
 }
 
@@ -145,5 +146,34 @@
     padding: 1rem;
     text-align: center;
     width: 100%;
+  }
+}
+
+/* Resume button in navbar */
+.resume-btn {
+  background: linear-gradient(90deg, #FFD580, #FFAA33);
+  color: #0f0f0f;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.resume-btn:hover {
+  background: linear-gradient(90deg, #FFAA33, #FFD580);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Mobile menu adjustment */
+@media (max-width: 768px) {
+  .resume-btn {
+    display: block;
+    text-align: center;
+    margin: 0.5rem auto;
+    width: 80%;
   }
 }

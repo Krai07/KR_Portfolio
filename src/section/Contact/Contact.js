@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaInstagram } from "react-icons/fa";
 import "./Contact.css";
 
 function Contact() {
@@ -30,6 +30,10 @@ function Contact() {
           <a href="https://github.com/Krai07" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
+          <a href="https://www.instagram.com/kshitij.rai_/" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          
         </div>
       </motion.div>
 

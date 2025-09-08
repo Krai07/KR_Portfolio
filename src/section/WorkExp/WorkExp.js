@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import "./WorkExp.css";
 
 const experiences = [
-  { id: 1, company: "MindCraft Software", role: "Consultant", duration: "Sep 2024 - Present", description: "Worked on full-stack development, optimized APIs, and improved performance by 40%." },
+  { id: 1, company: "MindCraft Software", role: "Consultant", duration: "Sep 2024 - Present", description: "Worked on full-stack development for insurance and mutual fund domain clients, developed both backend and frontend with latest technology" },
   { id: 2, company: "MindCraft Software", role: "Associate Consultant", duration: "Aug 2023 - Aug 2024", description: "Developed modern UI with React and improved user retention by 25%." },
   { id: 3, company: "Tata Strive", role: "Trainee- CyberSecurity", duration: "April 2023 - Aug 2024", description: "Built scalable APIs and integrated database solutions with MongoDB." },
 ];

@@ -32,6 +32,18 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          {/* Resume Button */}
+          <li>
+            <a
+              href="/resume.pdf" // put your PDF inside "public" folder
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-btn"
+              onClick={handleLinkClick}
+            >
+              Resume
+            </a>
+          </li>
         </ul>
         <div
           className={`hamburger ${menuOpen ? 'open' : ''}`}

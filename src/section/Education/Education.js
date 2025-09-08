@@ -5,21 +5,21 @@ import "./Education.css";
 const education = [
   {
     id: 1,
-    degree: "Bachelor of Technology",
-    institution: "XYZ University",
-    duration: "2018 - 2022",
+    degree: "B.E in Computer Engineering",
+    institution: "Saraswati College of Engineering (Mumbai University)",
+    duration: "2019 - 2023",
   },
   {
     id: 2,
-    degree: "Higher Secondary (12th Grade)",
-    institution: "ABC Junior College",
-    duration: "2016 - 2018",
+    degree: "Higher Secondary Certificate HSC- XII",
+    institution: "Shiravane Vidyalaya and Junior College",
+    duration: "2017 - 2019",
   },
   {
     id: 3,
-    degree: "Secondary School (10th Grade)",
-    institution: "DEF High School",
-    duration: "2014 - 2016",
+    degree: "Senior Secondary School ICSE-X",
+    institution: "Ryan International School",
+    duration: "2007 - 2016",
   },
 ];
 
