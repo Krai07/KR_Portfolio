@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">MyPortfolio</div>
+        <div className="navbar-logo">KR</div>
         <ul className={`navbar-list ${menuOpen ? 'show' : ''}`}>
           {navLinks.map(name => (
             <li key={name}>

@@ -3,7 +3,7 @@
   padding: 80px 0;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
-  overflow: hidden; /* hide extra cards */
+  overflow: hidden;
 }
 
 .projects-title {
@@ -17,7 +17,7 @@
   display: flex;
   gap: 2rem;
   padding: 20px;
-  width: max-content; /* allow wide content to scroll */
+  width: max-content;
 }
 
 .project-card {
@@ -49,19 +49,54 @@
   color: #e1e1e1;
 }
 
+/* === Tech logos section === */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.tech-chip {
-  background: linear-gradient(90deg, #ff7eb3, #65c7f7, #0052d4);
-  color: #fff;
-  font-size: 0.8rem;
-  padding: 5px 10px;
+.tech-icon {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 12px;
+  padding: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Tooltip on hover */
+.tech-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+}
+
+.tech-icon:hover::after {
+  opacity: 1;
+  bottom: -34px;
 }
 
 .project-description {
@@ -90,4 +125,3 @@
   opacity: 0.85;
   transform: scale(1.1);
 }
-
