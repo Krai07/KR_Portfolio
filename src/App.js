@@ -6,7 +6,7 @@ import Education from './section/Education/Education';
 import Work from './section/WorkExp/WorkExp';
 import Projects from './section/Projects/Projects';
 import Contact from './section/Contact/Contact';
-import './index.css'; // Make sure this import is present
+import './index.css'; 
 
 function App() {
   const [isReady, setIsReady] = useState(false);
