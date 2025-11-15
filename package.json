@@ -44,5 +44,6 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
-  }
+  },
+  "homepage": "https://github.com/Krai07/KR_Portfolio"
 }
