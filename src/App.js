@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar.js';
 import Home from './section/Home/Home';
 import About from './section/About/About';
 import Education from './section/Education/Education';
 import Work from './section/WorkExp/WorkExp';
 import Projects from './section/Projects/Projects';
 import Contact from './section/Contact/Contact';
-import './index.css'; 
+import './index.css'; // Make sure this import is present
 
 function App() {
   const [isReady, setIsReady] = useState(false);
