@@ -12,17 +12,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: List dir
-        uses: ls -al
-      
-      - name: Git branch
-        uses: git branch --show-current
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'   # React recommended version, works for most setups
+
+
+      - name: Git branch
+        run: git branch --show-current
+  
+      - name: List dir
+        run: ls -al
+      
 
       - name: Install dependencies
         run: npm ci
