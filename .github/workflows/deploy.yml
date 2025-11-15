@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build     # Creates the build/ folder
+        run: npm run build ../    # Creates the build/ folder
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
