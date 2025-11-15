@@ -12,6 +12,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: List dir
+        uses: ls -al
+      
+      - name: Git branch
+        uses: git branch --show-current
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
