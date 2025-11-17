@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import Navbar from './components/Button/Button';
+import Navbar from './components/navbar/navbar';  // ← your REAL navbar
 import Home from './section/Home/Home';
 import About from './section/About/About';
 import Education from './section/Education/Education';
 import Work from './section/WorkExp/WorkExp';
 import Projects from './section/Projects/Projects';
 import Contact from './section/Contact/Contact';
-import './index.css'; // Make sure this import is present
+import './index.css';
 
 function App() {
   const [isReady, setIsReady] = useState(false);
@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsReady(true);
-    }, 1000); // 1-second delay
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -15,6 +15,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">KR</div>
+
         <ul className={`navbar-list ${menuOpen ? 'show' : ''}`}>
           {navLinks.map(name => (
             <li key={name}>
@@ -32,10 +33,10 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          {/* Resume Button */}
+
           <li>
             <a
-              href="/resume.pdf" // put your PDF inside "public" folder
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"
@@ -45,6 +46,7 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
+
         <div
           className={`hamburger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
