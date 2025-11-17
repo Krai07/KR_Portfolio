@@ -4,7 +4,7 @@ import './navbar.css';
 
 const navLinks = ['Home', 'About', 'Education', 'Work', 'Projects', 'Contact'];
 
-export default function navbar() {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
