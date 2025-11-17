@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
+import navbar from './components/navbar/navbar';
 import Home from './section/Home/Home';
 import About from './section/About/About';
 import Education from './section/Education/Education';
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       {isReady ? (
         <>
-          <Navbar />
+          <navbar />
           <main>
             <Home />
             <About />

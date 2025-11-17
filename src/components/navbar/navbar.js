@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import './Navbar.css';
+import './navbar.css';
 
 const navLinks = ['Home', 'About', 'Education', 'Work', 'Projects', 'Contact'];
 
-export default function Navbar() {
+export default function navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = () => {

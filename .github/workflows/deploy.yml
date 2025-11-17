@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.16'   # React recommended version, works for most setups
+          node-version: '22'   # React recommended version, works for most setups
 
 
       - name: Git branch
