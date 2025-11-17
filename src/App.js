@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       {isReady ? (
         <>
-          <navbar />
+          <Navbar />
           <main>
             <Home />
             <About />
